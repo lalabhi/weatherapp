@@ -1,0 +1,6 @@
+name: Weather App
+type: module
+description: Check the weather condition.
+core: 8.x
+dependencies:
+  - block

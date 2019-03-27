@@ -1,0 +1,9 @@
+<?php
+function weatherapp_theme() {
+  return array(
+    'weather_app_block' => array(
+      'variables' => array('title' => NULL, 'description' => NULL, 'data' => NULL, 'url' => NULL),
+      'template' => 'block-custom',
+    ),
+  );
+}

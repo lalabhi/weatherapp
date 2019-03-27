@@ -1,0 +1,4 @@
+services:
+  weatherapp.getapi:
+    class: Drupal\weatherapp\WeatherApi
+    arguments: ['@http_client', '@http_client_factory']
