@@ -87,7 +87,6 @@ class WeatherBlock extends BlockBase implements ContainerFactoryPluginInterface 
    * {@inheritdoc}
    */
   public function blockForm($form, FormStateInterface $form_state) {
-    $config = $this->getConfiguration();
     $form['city'] = [
       '#type' => 'textfield',
       '#title' => $this->t('city'),

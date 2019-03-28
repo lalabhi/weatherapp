@@ -1,4 +1,7 @@
 <?php
+/**
+ * hook_theme()
+ */
 function weatherapp_theme() {
   return array(
     'weather_app_block' => array(
