@@ -53,11 +53,7 @@ class WeatherBlock extends BlockBase implements ContainerFactoryPluginInterface 
       $image_uri = \Drupal\file\Entity\File::load($image_field[0]);
       $val = $this->callapi->weatherapi($this->configuration['city']);
       $response = Json::decode($val);
-     //kint($response['main']);
-      //kint($this->configuration['city']);
       $image_url = $image_uri->uri->value;
-      //kint($image_url);
-//      $files = \Drupal::entityTypeManager()->getStorage('file')->loadByProperties(['uri' => $image_url]);
       return [
         '#theme' => 'weather_app_block',
         '#title' => $this->configuration['city'],
@@ -117,7 +113,6 @@ class WeatherBlock extends BlockBase implements ContainerFactoryPluginInterface 
     $this->configuration['description'] = $form_state->getValue('description');
     $this->configuration['image']= $form_state->getValue('upload');
     $image =  $form_state->getValue('upload');
-    //kint($form_state->getValue('upload'));
     $file = \Drupal\file\Entity\File::load( $image[0] );
 
     /* Set the status flag permanent of the file object */
