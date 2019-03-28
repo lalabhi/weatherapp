@@ -35,6 +35,8 @@ class WeatherData extends ConfigFormBase {
       '#type' => 'textfield',
       '#title' => $this->t('App Id'),
       '#default_value' => $config->get('AppID'),
+      '#required' => TRUE,
+
     ];
 
     return parent::buildForm($form, $form_state);
